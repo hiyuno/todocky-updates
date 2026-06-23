@@ -22,14 +22,14 @@
 
         <item>
             <title>Version 1.0.0</title>
-            <pubDate>Mon, 23 Jun 2026 00:00:00 +0000</pubDate>
+            <pubDate>Mon, 23 Jun 2026 02:04:00 +0000</pubDate>
             <enclosure
                 url="https://github.com/hiyuno/todocky-updates/releases/download/v1.0.0/Todocky-1.0.0.dmg"
                 sparkle:version="1"
                 sparkle:shortVersionString="1.0.0"
-                length="10714487"
+                length="10849007"
                 type="application/octet-stream"
-                sparkle:edSignature="W5c/TwU/3sQq472RoO17RRiS0JED4mLldXvqN/k9yc4HCUp2ugsZTg9Uje9MLWA8LOIVrtX4gdeA5nTkXSRfCA==" />
+                sparkle:edSignature="A5Gc+mL7tnbxKTYq3LfB2WfK/ATXZYJcDXCt+7Z8uX4TpaD/NVBvmzZJ4cjRHnevm6zJzWJEqgMbjhTn8vX0Dg==" />
         </item>
 
     </channel>
