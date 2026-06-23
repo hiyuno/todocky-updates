@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+     xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Todocky</title>
+        <link>https://github.com/hiyuno/Todocky</link>
+        <description>Todocky changelog</description>
+        <language>en</language>
+
+        <!-- Add new <item> entries here for each release. Keep the latest version first. -->
+
+        <item>
+            <title>Version 1.1.0</title>
+            <sparkle:releaseNotesLink>https://github.com/hiyuno/Todocky/releases/tag/v1.1.0</sparkle:releaseNotesLink>
+            <pubDate>Mon, 23 Jun 2026 01:06:00 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/Todocky/releases/download/v1.1.0/Todocky-1.1.0.dmg"
+                sparkle:version="2"
+                sparkle:shortVersionString="1.1.0"
+                length="10721148"
+                type="application/octet-stream"
+                sparkle:edSignature="0KGDpqNBm8IpX0bZqouc2YfInWYY6854EU0mbLWPD7PG6HHaLSjI1L1OlRvWCWGR2Wg5ajFT/swSVkwRonbCCg==" />
+        </item>
+
+        <item>
+            <title>Version 1.0.0</title>
+            <sparkle:releaseNotesLink>https://github.com/hiyuno/Todocky/releases/tag/v1.0.0</sparkle:releaseNotesLink>
+            <pubDate>Mon, 23 Jun 2026 00:00:00 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/Todocky/releases/download/v1.0.0/Todocky-1.0.0.dmg"
+                sparkle:version="1"
+                sparkle:shortVersionString="1.0.0"
+                length="10714487"
+                type="application/octet-stream"
+                sparkle:edSignature="W5c/TwU/3sQq472RoO17RRiS0JED4mLldXvqN/k9yc4HCUp2ugsZTg9Uje9MLWA8LOIVrtX4gdeA5nTkXSRfCA==" />
+        </item>
+
+        <!--
+        <item>
+            <title>Version 1.0.0</title>
+            <sparkle:releaseNotesLink>https://github.com/hiyuno/Todocky/releases/tag/v1.0.0</sparkle:releaseNotesLink>
+            <pubDate>Sun, 22 Jun 2026 12:00:00 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/Todocky/releases/download/v1.0.0/Todocky.dmg"
+                sparkle:version="1"
+                sparkle:shortVersionString="1.0.0"
+                length="12345678"
+                type="application/octet-stream"
+                sparkle:edSignature="REPLACE_WITH_SIGNATURE_FROM_sign_update" />
+        </item>
+        -->
+    </channel>
+</rss>
