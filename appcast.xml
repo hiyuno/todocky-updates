@@ -11,6 +11,18 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.4.5</title>
+            <sparkle:releaseNotesLink>https://github.com/hiyuno/todocky-updates/releases/tag/v1.4.5</sparkle:releaseNotesLink>
+            <pubDate>Sat, 04 Jul 2026 23:07:18 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.4.5/Todocky-1.4.5.dmg"
+                sparkle:version="6"
+                sparkle:shortVersionString="1.4.5"
+                type="application/octet-stream"
+                sparkle:edSignature="6agu7up6IpLwYx3bEK0IFsCzPzDYYyqIge23N5UmVu9Rv2P4+Fr1oe+ENyScVF2RBEUJkCezBUcvyaBwIKMnDg==" length="10800433" />
+        </item>
+
+        <item>
             <title>Version 1.4.4</title>
             <sparkle:releaseNotesLink>https://github.com/hiyuno/todocky-updates/releases/tag/v1.4.4</sparkle:releaseNotesLink>
             <pubDate>Sat, 04 Jul 2026 22:48:24 +0000</pubDate>
