@@ -11,6 +11,28 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.7</title>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li>Sync Finder clasifica errores de firma invalida y guia a reinstalar una release verificada.</li>
+<li>Repair Registration usa reintentos acotados de 0.5, 1 y 2 segundos para la carrera conocida de SMAppService.</li>
+<li>El pipeline bloquea releases sin identidad Developer ID valida, firmas o entitlements invalidos y fallos de Gatekeeper.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>La publicacion genera version y build durante el archive; ya no modifica ni vuelve a firmar exportaciones existentes.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Sun, 19 Jul 2026 08:00:00 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.7/Todocky-1.6.7.dmg"
+                sparkle:version="15"
+                sparkle:shortVersionString="1.6.7"
+                type="application/octet-stream"
+                sparkle:edSignature="WSzY6aZf2V59DxqB5SuGzj9WlfQU2fe6XZBOjsc8P5OzLhBAermyUqMOuPvcpvICVQwMppKz4RPo5YzwYak/Dw==" length="11298643" />
+        </item>
+
+        <item>
             <title>Version 1.6.6</title>
             <description><![CDATA[<p>Bug fixes and improvements.</p>]]></description>
             <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
