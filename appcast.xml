@@ -11,6 +11,32 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.9</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>El helper de Sync Finder emite logs de diagnóstico (subsystem mx.9866.syncfinder.agent) para conexiones, sincronizaciones y errores del sidebar.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>En el launcher global, el botón Start/Resume/Pause deja de quedar en verde cuando Tab enfoca un quick link.</li>
+<li>El tabulador del launcher recorre los quick links y también el botón Start/Resume/Pause.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>El launcher permite completar el siguiente subtask incompleto con Tab + Enter (o click en el check).</li>
+<li>Sync Finder ahora funciona en Macs recién instaladas: la verificación de carpetas se hace en el helper (sin restricciones de sandbox), se avisa cuando ninguna carpeta de las tareas existe en esta Mac, se bloquea la activación si la app corre desde el DMG, y la aprobación en Login Items se detecta automáticamente al concederla.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Sun, 19 Jul 2026 18:01:04 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.9/Todocky-1.6.9.dmg"
+                sparkle:version="17"
+                sparkle:shortVersionString="1.6.9"
+                type="application/octet-stream"
+                sparkle:edSignature="iTxR7SbmDZCWO7bSTMet6gouFRypNJ1Ito6PK/PZFLpWPpVv7Egc9qM0ZUbU4fESXT9+6gNNFQjfMapQ45NKCw==" length="11336247" />
+        </item>
+
+        <item>
             <title>Version 1.6.8</title>
             <description><![CDATA[<h3>Changed</h3>
 <ul>
