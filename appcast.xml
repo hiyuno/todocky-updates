@@ -11,6 +11,32 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.10</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>En Quicktask, ⌘N abre el sheet para crear una tarea y ⌘E abre el editor de la tarea seleccionada.</li>
+<li>La card de Sync Finder detecta el bloqueo por registro corrupto de Background Items y muestra el comando de reparación (`sudo sfltool resetbtm`) con botón de copiado.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>El launcher global pasa a llamarse Quicktask en Settings.</li>
+<li>En Quicktask, la fila muestra la subtask incompleta arriba y `proyecto &gt; título` abajo; el check avanza subtasks y, al completar la última (o si no hay subtasks), manda la tarea a Done.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>&quot;You&#x27;re up to date!&quot; en Settings → About se muestra como aviso verde; el rojo queda solo para errores reales de update.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Sun, 19 Jul 2026 23:08:49 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.10/Todocky-1.6.10.dmg"
+                sparkle:version="18"
+                sparkle:shortVersionString="1.6.10"
+                type="application/octet-stream"
+                sparkle:edSignature="BUQEvjm5mYKQrVXpT+VTsvfn8GzPWhZq2sjQUoNdTlg8vZQQsWxNHtuvRwcPXNYlNwQFQGXsFGmh/0GQFitSBg==" length="11370153" />
+        </item>
+
+        <item>
             <title>Version 1.6.9</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
