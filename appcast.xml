@@ -11,6 +11,22 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.5</title>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li>Repair Registration de Sync Finder espera a que macOS complete el unregister y reintenta errores transitorios de `SMAppService` (`Operation not permitted`), mostrando dominio y código para errores permanentes.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Sun, 19 Jul 2026 04:26:12 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.5/Todocky-1.6.5.dmg"
+                sparkle:version="13"
+                sparkle:shortVersionString="1.6.5"
+                type="application/octet-stream"
+                sparkle:edSignature="cV7OlbPXO54rPv5AnqcgV3VxBAPdwSI4m2VF38OodDaHQQ2XHswEFN8OpslGcozFa3cGwhD5xvOXJ2pJ+OgqCw==" length="11299430" />
+        </item>
+
+        <item>
             <title>Version 1.6.4</title>
             <description><![CDATA[<p>Bug fixes and improvements.</p>]]></description>
             <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
