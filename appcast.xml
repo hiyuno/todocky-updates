@@ -11,6 +11,22 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.8</title>
+            <description><![CDATA[<h3>Changed</h3>
+<ul>
+<li>La sección &quot;Sync Finder&quot; de Settings ahora vive bajo &quot;Experimental&quot; (icono de matraz), al final del sidebar.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Sun, 19 Jul 2026 17:08:02 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.8/Todocky-1.6.8.dmg"
+                sparkle:version="16"
+                sparkle:shortVersionString="1.6.8"
+                type="application/octet-stream"
+                sparkle:edSignature="YUfd0beiV1Uv+xUKov9CI4sxFZCGww9IeXJpdZcEjMc+t7DKYFPZJn44l2vpCpBh1qSpnsKN2iNzIetea1xWAA==" length="11299031" />
+        </item>
+
+        <item>
             <title>Version 1.6.7</title>
             <description><![CDATA[<h3>Fixed</h3>
 <ul>
