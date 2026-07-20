@@ -11,6 +11,29 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.11</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>Switch &quot;Automatic updates&quot; en Settings → About (checks periódicos + descarga en background vía Sparkle).</li>
+<li>En Settings → QuickTask, picker para mostrar tareas solo de Today o también de Backlog (pausadas).</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Al estar en la última versión, &quot;Check for Updates&quot; solo muestra la franja verde en About; ya no abre el modal de Sparkle.</li>
+<li>QuickTask hace hug vertical: la ventana se encoge al filtrar o al quitar tareas de la lista.</li>
+<li>Start/Resume/Pause usan el mismo botón rectangular redondeado (sin pills) en las tarjetas de Today y en QuickTask.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Mon, 20 Jul 2026 14:17:23 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.11/Todocky-1.6.11.dmg"
+                sparkle:version="19"
+                sparkle:shortVersionString="1.6.11"
+                type="application/octet-stream"
+                sparkle:edSignature="CL3nEAOMH9Gee1Yp1RZnd7DsNXETFHtFNL7VlOWlELIzN1GHhCq4rJExMgyxCg27rjqQJbrHzGCD8rK7zP9eAg==" length="11398487" />
+        </item>
+
+        <item>
             <title>Version 1.6.10</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
