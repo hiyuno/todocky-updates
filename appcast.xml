@@ -11,6 +11,22 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.12</title>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li>El timer ya no se desconecta al sincronizar iCloud justo después de Start (QuickTask y board): se conserva el entry id local y se coalescen los pushes a la nube.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Mon, 20 Jul 2026 21:44:09 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.12/Todocky-1.6.12.dmg"
+                sparkle:version="20"
+                sparkle:shortVersionString="1.6.12"
+                type="application/octet-stream"
+                sparkle:edSignature="Bdn8Gh9iX5EfLHrYq90EjAXiVql7sonqXdZETtObnaBvQ7eXVGTHnDgL+jPnwcBZYz74KQN5B90TpIWuSRbRDw==" length="11408735" />
+        </item>
+
+        <item>
             <title>Version 1.6.11</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
