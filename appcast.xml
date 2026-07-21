@@ -11,6 +11,22 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.16</title>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li>La reconciliación del timer con Toggl ahora espera 90 segundos desde que se inicia una tarea antes de comparar con el entry real, evitando falsos positivos por latencia de propagación de la API de Toggl justo después de Start.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Tue, 21 Jul 2026 23:58:11 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.16/Todocky-1.6.16.dmg"
+                sparkle:version="24"
+                sparkle:shortVersionString="1.6.16"
+                type="application/octet-stream"
+                sparkle:edSignature="KvctBghW8dYmj6tfBDscLdT7E5Xw9RTjHFJ3CFlBZrKIDA4KS6tQfUiAxYOZ715uw00+s8BeMjh3RhuebiKJBw==" length="11419272" />
+        </item>
+
+        <item>
             <title>Version 1.6.15</title>
             <description><![CDATA[<h3>Fixed</h3>
 <ul>
