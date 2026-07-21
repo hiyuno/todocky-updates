@@ -11,6 +11,27 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.13</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>Idle auto-pause tiene su propia sección en Settings → General, con switch para desactivarlo por completo.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>El timer ya no se pausa solo a los segundos de hacer Start (board o QuickTask): otra Mac idle ya no puede detener por iCloud/Toggl un timer que no arrancó ella, se ignoran snapshots de iCloud obsoletos o de eco propio, y el estado transitorio de Start ya no se sube a la nube.</li>
+<li>Resume y Pause ya no pueden dispararse dos veces en paralelo sobre la misma tarea (doble clic o doble tap): antes, el segundo disparo creaba un entry nuevo en Toggl y detenía el primero, dejando el timer local contando sobre un entry ya parado.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Tue, 21 Jul 2026 20:12:47 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.13/Todocky-1.6.13.dmg"
+                sparkle:version="21"
+                sparkle:shortVersionString="1.6.13"
+                type="application/octet-stream"
+                sparkle:edSignature="Iwz4MIBNW8W8UV0WfvpptVMXBRp3tN2WnjdVnL1/EGmh6djQUeiLfZ1aFliczOxXl91SqQjj181QaD5wmj5TCw==" length="11416294" />
+        </item>
+
+        <item>
             <title>Version 1.6.12</title>
             <description><![CDATA[<h3>Fixed</h3>
 <ul>
