@@ -11,6 +11,22 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.15</title>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li>Iniciar una tarea ya no detiene a ciegas el entry de Toggl que esté corriendo en la cuenta (podía ser de otra tarea o de otra Mac). El timer local ahora detecta cuando su entry fue detenido externamente (otra Mac, límite de Toggl de un entry por cuenta, o manualmente en Toggl) y se pausa localmente en vez de seguir contando sobre un entry inexistente.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Tue, 21 Jul 2026 23:10:28 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.15/Todocky-1.6.15.dmg"
+                sparkle:version="23"
+                sparkle:shortVersionString="1.6.15"
+                type="application/octet-stream"
+                sparkle:edSignature="XedubVNkAyAL0kWMnWSzRD/enZTleAve2oQnYQWMSZh8nERoNnTtzxPHiXLOpeqjHviRfiNeNier/xnofY3zCg==" length="11420384" />
+        </item>
+
+        <item>
             <title>Version 1.6.14</title>
             <description><![CDATA[<h3>Fixed</h3>
 <ul>
