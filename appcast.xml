@@ -11,6 +11,22 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.14</title>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li>El merge de iCloud ya no puede pisar el status de una tarea corriendo con una versión más nueva pero desactualizada de otro dispositivo (o del mismo): status, startedAt, runningTimeEntryId y syncState de una tarea `.inProgress` local se conservan siempre en el merge. Completar una tarea desde el checkbox y avanzar al siguiente subtask también respetan ahora el guard de reentrancia del timer.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Tue, 21 Jul 2026 22:37:22 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.14/Todocky-1.6.14.dmg"
+                sparkle:version="22"
+                sparkle:shortVersionString="1.6.14"
+                type="application/octet-stream"
+                sparkle:edSignature="LDu55sGSK/a6FylYE2WzRmVX/gw5RvVBNz4xsjo9ZNZ41U1vfGEwHwHjpl5U7z5DEsE0zf3E0cThd53QhqnNCA==" length="11417309" />
+        </item>
+
+        <item>
             <title>Version 1.6.13</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
