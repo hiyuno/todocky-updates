@@ -11,6 +11,26 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.19</title>
+            <description><![CDATA[<h3>Changed</h3>
+<ul>
+<li>La reconciliación del timer con Toggl pasa de cada 30s a cada 10s, para que una pausa hecha en otra Mac se refleje aquí más rápido.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Al volver de sleep o al traer Todocky a primer plano, se fuerza una reconciliación inmediata con Toggl en vez de esperar al siguiente poll, así una tarea pausada en otra Mac mientras esta dormía deja de mostrarse como corriendo apenas se despierta.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Wed, 22 Jul 2026 20:21:47 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.19/Todocky-1.6.19.dmg"
+                sparkle:version="27"
+                sparkle:shortVersionString="1.6.19"
+                type="application/octet-stream"
+                sparkle:edSignature="17vWnaZhCVzcBfc+ZxjPR0NQUAit3GR+694N6iCMxZg6QR8B21cKz7LfJzWOJXPleZnt4kuogNIQsaaA7O+oAA==" length="11455394" />
+        </item>
+
+        <item>
             <title>Version 1.6.18</title>
             <description><![CDATA[<h3>Fixed</h3>
 <ul>
