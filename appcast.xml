@@ -11,6 +11,22 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.17</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>Nueva sección &quot;Timer Log&quot; en Settings que muestra en vivo los chequeos de reconciliación con Toggl y el estado de idle-detection, para diagnosticar sin necesidad de Terminal.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Wed, 22 Jul 2026 00:08:16 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.17/Todocky-1.6.17.dmg"
+                sparkle:version="25"
+                sparkle:shortVersionString="1.6.17"
+                type="application/octet-stream"
+                sparkle:edSignature="oLFODAD9rHwiwv6fC/MyLguF+CCGTWJBzaQbKOmYEcK1CSItB8Hqmad/b+nUgLUdoNwUZOC+sHwV21sGgzlVCw==" length="11454047" />
+        </item>
+
+        <item>
             <title>Version 1.6.16</title>
             <description><![CDATA[<h3>Fixed</h3>
 <ul>
