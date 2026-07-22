@@ -11,6 +11,22 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.18</title>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li>QuickTask ya no cambia de Space ni trae la ventana principal de Todocky al frente al hacer Resume/Start/Pause: el panel ya no fuerza la activación de la app, solo se activa a sí mismo como corresponde a un panel no-activante.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Wed, 22 Jul 2026 19:51:22 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.18/Todocky-1.6.18.dmg"
+                sparkle:version="26"
+                sparkle:shortVersionString="1.6.18"
+                type="application/octet-stream"
+                sparkle:edSignature="wMlhe4MdxPqbKBpPp3bcgIQsJ1Rgovc+i5W0r4DB5XsIwfTySwUnri97Qz64ZMkv0FZVY3vnQdtX9urAjkfRAA==" length="11453892" />
+        </item>
+
+        <item>
             <title>Version 1.6.17</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
