@@ -11,6 +11,26 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.20</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>⌘N en la ventana principal abre el sheet de crear tarea (primer shortcut de una serie planeada para la interfaz principal).</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>El shortcut global de QuickTask (⌃Space u otro configurado) volvió a funcionar estando en cualquier app, no solo con Todocky en foco: el panel ya no depende de `hidesOnDeactivate`, que lo mantenía oculto desde que 1.6.18 dejó de activar la app al mostrarlo.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Thu, 23 Jul 2026 16:42:11 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.20/Todocky-1.6.20.dmg"
+                sparkle:version="28"
+                sparkle:shortVersionString="1.6.20"
+                type="application/octet-stream"
+                sparkle:edSignature="2uXRtugyBRigUsa6kqpo5SkGZYv5+7FFxPxSRIeSeeg/AK0l9IPBS0Snn46+VcXH6avpmre2qgNK12ralUQWAQ==" length="11455264" />
+        </item>
+
+        <item>
             <title>Version 1.6.19</title>
             <description><![CDATA[<h3>Changed</h3>
 <ul>
