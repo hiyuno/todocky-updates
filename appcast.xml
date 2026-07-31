@@ -11,6 +11,22 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.21</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>Botón de play en cada subtask (tarjeta del board): elegir cualquier subtask la fija como la que se trackea en Toggl, sin importar el orden. Si el timer ya está corriendo en otra subtask, cambia el entry al instante; si la tarea está pausada, arranca el timer con esa subtask activa. Al completar la subtask fijada manualmente, el timer se pausa y espera a que elijas la siguiente con play, en vez de adivinar cuál sigue.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Fri, 31 Jul 2026 01:28:38 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.21/Todocky-1.6.21.dmg"
+                sparkle:version="29"
+                sparkle:shortVersionString="1.6.21"
+                type="application/octet-stream"
+                sparkle:edSignature="sZgqkS9EP6L+GtzmcCQkHFGSZTVPz6muN+4Tja6meJJLdXMB+YGJEshDS5gGNEXw73ONaG/4r+1lm1lxaM8QCw==" length="11472482" />
+        </item>
+
+        <item>
             <title>Version 1.6.20</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
