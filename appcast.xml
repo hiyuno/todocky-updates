@@ -11,6 +11,22 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.22</title>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li>La vista compacta (sin expandir) de subtasks en la tarjeta del board ya no muestra las primeras N subtasks en orden de creación (que podían estar todas completadas); ahora prioriza mostrar las pendientes, igual que ya hacía la vista compacta de las tarjetas sin checkboxes.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Fri, 31 Jul 2026 01:31:49 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.22/Todocky-1.6.22.dmg"
+                sparkle:version="30"
+                sparkle:shortVersionString="1.6.22"
+                type="application/octet-stream"
+                sparkle:edSignature="yQXmXTgnswTiBPO1EegA/bmiwFLi0HQi6M86cc50xadDXfnROhLqnwk8IN0PySyGyfMz9S5du5Ee4wdEEGLqAw==" length="11471880" />
+        </item>
+
+        <item>
             <title>Version 1.6.21</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
