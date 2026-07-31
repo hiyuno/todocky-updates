@@ -11,6 +11,27 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.24</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>El picker de emoji del Lunch Status en Settings → Slack ahora es un botón que abre el selector nativo de macOS (⌃⌘Espacio) en vez de escribir el emoji junto al texto.</li>
+<li>Click derecho en el botón de play de una subtask abre directo el popup para escribir qué estás haciendo específicamente (ej. &quot;Editing Photo&quot;); se agrega al final del description en Toggl como &quot;... - Editing Photo&quot;. Un click normal sigue funcionando igual que antes, sin preguntar nada. El botón se reimplementó con un control nativo de AppKit para poder distinguir click izquierdo de derecho de forma confiable.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>El botón de play de la subtask activa (verde, relleno) ahora pausa el timer al hacerle click de nuevo, en vez de no hacer nada.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Fri, 31 Jul 2026 22:28:18 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.24/Todocky-1.6.24.dmg"
+                sparkle:version="32"
+                sparkle:shortVersionString="1.6.24"
+                type="application/octet-stream"
+                sparkle:edSignature="U9ANDglHAocGQQ+eEYuH/l/3dOWs45qsijNfDA2xQUFr1okHmHKq5UAujBizu0rMxDpYj1MGQGkY7K8cbR60AA==" length="11636939" />
+        </item>
+
+        <item>
             <title>Version 1.6.23</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
