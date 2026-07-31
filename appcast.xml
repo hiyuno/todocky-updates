@@ -11,6 +11,22 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.23</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>Integración con Slack (Settings → Slack): con un token de una Slack App propia, Todocky puede poner tu presencia en &quot;away&quot; tras 1, 2 o 3 horas sin actividad en la Mac (configurable, no te regresa a active automáticamente), y un botón junto al + en la ventana principal pone/quita un status de &quot;Lunch&quot; personalizable (un solo campo de texto, con emoji incluido) por 1 hora en Slack. ⌘L hace lo mismo desde QuickTask.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Fri, 31 Jul 2026 14:13:01 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.23/Todocky-1.6.23.dmg"
+                sparkle:version="31"
+                sparkle:shortVersionString="1.6.23"
+                type="application/octet-stream"
+                sparkle:edSignature="2LpPAykQvmYLhK5IDfLap2yg3iCIntKh/dcRfr3U0mXaJE4npwz+sBKw7/ZZdyzjc91NrNdStjJtJ4l6+nycDw==" length="11574793" />
+        </item>
+
+        <item>
             <title>Version 1.6.22</title>
             <description><![CDATA[<h3>Fixed</h3>
 <ul>
