@@ -11,6 +11,26 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.25</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>Timer en el menu bar (arriba a la derecha): al hacerle click muestra el título de la tarea/subtask, el tiempo del segmento actual (se resetea cada vez que cambias de subtask activa), y botones de Pause, Open Todocky y Quit. Implementado con AppKit puro (NSStatusItem) en vez de SwiftUI MenuBarExtra, porque actualizar el label de MenuBarExtra cada segundo metía a la app en un loop de renderizado infinito que congelaba todo al 100% de CPU (confirmado con `sample` al reproducirlo). Nota: en algunas Macs el número no se muestra directo en la barra (solo el ícono) — pendiente de confirmar si es específico de esa Mac o de la app; el dropdown siempre funciona.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>El status de Lunch en Slack ya no muestra el ícono de burbuja genérico con el emoji duplicado en el texto: para ~150 emojis comunes (comida, caras, actividades) ahora se manda el `status_emoji` real de Slack (ej. `:taco:`), usando el cuadrito de ícono dedicado igual que cualquier otro status manual. Emojis fuera de esa lista siguen combinándose en el texto como antes.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Mon, 03 Aug 2026 23:55:17 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.25/Todocky-1.6.25.dmg"
+                sparkle:version="33"
+                sparkle:shortVersionString="1.6.25"
+                type="application/octet-stream"
+                sparkle:edSignature="two9NlYwwACD0yyIxwv5c4/ennHQPOcwHAnorUYbR09k4yZwaDTQOkEo9sOoZNGQHWyyeXH3Z1op2n7nNEqPAQ==" length="11645509" />
+        </item>
+
+        <item>
             <title>Version 1.6.24</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
