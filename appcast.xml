@@ -11,6 +11,27 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.27</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>Activar Lunch pausa automáticamente cualquier tarea corriendo, y el timer del menu bar cambia a mostrar el tiempo de Lunch (con tu emoji real, ej. 🌮) en vez de la tarea, con &quot;End Lunch&quot; en el dropdown. El botón de Lunch en la ventana principal también muestra tu emoji real dentro del círculo cuando está activo, en vez del ícono genérico.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>El timer del menu bar vuelve a mostrar el ícono (timer.circle.fill) junto al número, con el tamaño de fuente igualado al del reloj del sistema y el ancho ajustado al contenido.</li>
+<li>El dropdown del timer del menu bar muestra el proyecto y la tarea/subtask activa (antes repetía el mismo texto dos veces).</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Tue, 04 Aug 2026 03:37:12 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.27/Todocky-1.6.27.dmg"
+                sparkle:version="35"
+                sparkle:shortVersionString="1.6.27"
+                type="application/octet-stream"
+                sparkle:edSignature="LfPElPtrrQQB9gt87C0aOm9WV78/D1z1gRT63jsksqWA39cobH8DfVLCvbgjIDBFMg9/XbWQu/KmX0hJQmmzDg==" length="11653841" />
+        </item>
+
+        <item>
             <title>Version 1.6.26</title>
             <description><![CDATA[<h3>Fixed</h3>
 <ul>
