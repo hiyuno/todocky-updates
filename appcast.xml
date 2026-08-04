@@ -11,6 +11,22 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.26</title>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li>El timer del menu bar ya sí muestra el número en la barra (antes solo el ícono, sin contar). La causa: el mecanismo que prendía/apagaba el timer según cambios detectados vía Combine se quedaba pegado en &quot;nada corriendo&quot; después del primer tick, aunque sí hubiera una tarea activa. Se reemplazó por un solo timer que corre siempre desde que arranca la app, sin lógica de encendido/apagado.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Tue, 04 Aug 2026 01:00:02 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.26/Todocky-1.6.26.dmg"
+                sparkle:version="34"
+                sparkle:shortVersionString="1.6.26"
+                type="application/octet-stream"
+                sparkle:edSignature="s+7JptgoMTSe7V2cZ1i0Knbj1K7UDGaq0L21rDECgcmDUYJKSQkWJR9CNewxUuaXFxGDcn1qFZ9k/RQh+Jh1AQ==" length="11643117" />
+        </item>
+
+        <item>
             <title>Version 1.6.25</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
