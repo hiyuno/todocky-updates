@@ -11,6 +11,28 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.28</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>⌘+Return en QuickTask hace lo mismo que click derecho en el play de una subtask en el board: abre el popup &quot;What are you doing?&quot; para agregar una nota antes de arrancar/cambiar de subtask. Si la tarea seleccionada no tiene subtasks, ⌘+Return se comporta igual que Enter normal.</li>
+<li>Duración configurable de Lunch en Settings → Slack → Lunch Status (15 min a 2h, antes fijo en 1h). El timer del menu bar durante Lunch ahora cuenta regresivo hacia 0 en vez de ir sumando, y al llegar a 0 suena un aviso (Glass) para avisar que se acabó.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>El timer del menu bar separa el click izquierdo (estado de tarea/Lunch + Pause) del click derecho (Open Todocky / Quit Todocky), en vez de mezclar todo en un solo menú.</li>
+<li>El dropdown del timer del menu bar ya no repite el tiempo transcurrido (ya se ve en la barra); solo muestra proyecto, tarea/subtask y las acciones.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Thu, 13 Aug 2026 20:58:50 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.28/Todocky-1.6.28.dmg"
+                sparkle:version="36"
+                sparkle:shortVersionString="1.6.28"
+                type="application/octet-stream"
+                sparkle:edSignature="WfCOhG5XK0KyerEhCwH8nASE9txDfbFZcTTFrpnVCmFaRypFnT0/NlL1fo4sf3gevtArPJydgkcSzKa7isqaAQ==" length="11680082" />
+        </item>
+
+        <item>
             <title>Version 1.6.27</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
