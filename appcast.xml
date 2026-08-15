@@ -11,6 +11,27 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.6.29</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>⌥+Return (o el nuevo ícono de lista junto a Resume/Pause) en QuickTask reemplaza la lista de tareas por las subtasks de la tarea seleccionada, mostradas con el mismo layout (checkbox, título, Start/Pause). Escape regresa a la lista de tareas; la búsqueda filtra subtasks mientras estás en esa vista. Tab recorre check → quick links → timer → ícono de subtasks en la fila de tarea, y check ↔ Start/Pause dentro de la lista de subtasks. Al abrir la lista, selecciona automáticamente la subtask en la que ya llevas avance.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>El editor de nota de ⌘+Return ya no aparece como un popup separado ni como una fila extra debajo: ahora reemplaza el contenido de la misma fila de la tarea (mismo alto), en vez de abrir una ventana flotante que se veía desconectada del panel de QuickTask.</li>
+<li>El scroll de las listas de QuickTask (tareas y subtasks) ya no recentra la selección en cada paso; solo se mueve lo necesario para revelar la siguiente fila al llegar al borde visible.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Sat, 15 Aug 2026 05:42:53 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.6.29/Todocky-1.6.29.dmg"
+                sparkle:version="37"
+                sparkle:shortVersionString="1.6.29"
+                type="application/octet-stream"
+                sparkle:edSignature="iwgzjM+QZ/g82pV5CrsFDN5s01m+bcycpZDNsY9yIEUlE5d0O+h1Zuhen9uAArXhjMCDbhms/uC0WTVM4B7GCA==" length="11731347" />
+        </item>
+
+        <item>
             <title>Version 1.6.28</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
