@@ -11,6 +11,26 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.7.3</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>iCloud Sync ahora funciona entre Macs distintas (&quot;Plan B&quot; de Ivan, ver `SECURITY_AUDIT.md`): la clave AES-256 que cifra `app-state.json` sigue siendo `synchronizable: false` en Keychain (nunca se reactivó `kSecAttrSynchronizable` — descartado por poco confiable, ver IVAN-035/037), así que en vez de eso la clave misma viaja por el canal existente de iCloud Drive envuelta bajo una passphrase elegida por el usuario. Nuevo `SyncKeyWrapping.swift` (PBKDF2-HMAC-SHA256 vía `CommonCrypto`, 310,000 iteraciones, salt de 16 bytes, sello con `AES.GCM`) implementa wrap/unwrap sin tocar la lógica existente de cifrado/decifrado de `PersistenceEncryption`. `CloudSyncService` gana un segundo archivo aditivo en el mismo directorio `Documents` de iCloud, `sync-key.json` (`fetchRemoteWrappedKey`/`publishWrappedKey`), completamente separado del documento `app-state.json` existente — ese formato/ruta de lectura no se tocó. Nuevo `CloudSyncKeyExchangeViewModel` orquesta el intercambio: al activar el toggle &quot;iCloud Sync&quot; en Settings, si no hay clave publicada todavía esta Mac se vuelve la semilla (sheet &quot;Create a Sync Passphrase&quot;); si ya hay una, se pide la passphrase existente (sheet &quot;Enter Sync Passphrase&quot;) y, tras desenvolverla, se compara contra la clave local de esta Mac — si coinciden no pasa nada más, si esta Mac no tenía clave local (instalación nueva) se adopta la sincronizada, y si difieren se muestra una alerta de conflicto explícita (&quot;Keep This Mac&#x27;s Data&quot; vs. &quot;Use My Other Macs&#x27; Data&quot;) sin ninguna reconciliación automática. Ningún branch mintea, sobrescribe o descarta una clave sin una acción explícita del usuario. Nuevo accessor de solo lectura `PersistenceEncryption.currentLocalKeyIfExists()` (nunca minta) y `adoptLocalKey(_:)` (solo tras confirmación explícita), ambos pasando por el mismo camino de Keychain ya exento de `cacheExemptAccounts` (IVAN-034) — no se introdujo una ruta paralela sin caché-exención.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>La cabecera del tablero ya no muestra la reunión de mañana temprano como &quot;Your next meeting&quot; cuando se refresca por la noche: `GoogleCalendarService.refresh()` traía un lookahead de 24h pero solo filtraba por `end &gt; now`, así que a las 9pm una reunión de las 9:15am del día siguiente calificaba como &quot;próxima reunión de hoy&quot;. Ahora el filtro también exige `Calendar.current.isDate($0.start, inSameDayAs: now)`, así `nextMeeting`/`todaysEvents` reflejan de verdad solo lo que queda de hoy. Además, cuando Google Calendar está conectado y ya no quedan reuniones hoy, la cabecera muestra un mensaje amistoso (&quot;There&#x27;s no more meetings for today — enjoy the rest of your day!&quot;) en vez de quedarse en silencio sin mencionar el calendario.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Tue, 18 Aug 2026 23:15:36 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.7.3/Todocky-1.7.3.dmg"
+                sparkle:version="41"
+                sparkle:shortVersionString="1.7.3"
+                type="application/octet-stream"
+                sparkle:edSignature="KjqY6BmFAuzqrEMLXLaWIoQeKeUBLHrcwWmzHq7JxckcQFKYJhv77SspfWHTwwWksoptwbBikTXhHDbnSNx+Cg==" length="12491566" />
+        </item>
+
+        <item>
             <title>Version 1.7.2</title>
             <description><![CDATA[<h3>Changed</h3>
 <ul>
