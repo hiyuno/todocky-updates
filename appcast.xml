@@ -11,6 +11,26 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.7.2</title>
+            <description><![CDATA[<h3>Changed</h3>
+<ul>
+<li>El título de la app (barra de menú, Dock, título de ventana) ya no dice &quot;Todocky (Beta)&quot; — ahora es solo &quot;Todocky&quot; (`CFBundleDisplayName`/`CFBundleName` en `Todocky/Info.plist`).</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>El resaltado &quot;being dragged&quot; (verde) de una fila de subtarea en el reorder list del editor de tareas ya no se queda pegado permanentemente cuando el usuario suelta el drag fuera de una fila o del botón &quot;Add&quot; (únicos lugares con `.onDrop` antes de este fix). Se agregó un `.onDrop` catch-all en el `VStack` contenedor de la sección &quot;Subtasks&quot; (`subtasksInputSection`, `TaskListView.swift`) y, como red de seguridad adicional, un `NSEvent.addLocalMonitorForEvents(matching: .leftMouseUp)` (nuevo estado `subtaskDragMouseUpMonitor`) que limpia `draggedSubtaskId`/`subtaskDropTargetIndex` tras un breve delay si `performDrop` nunca llegó a dispararse.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Tue, 18 Aug 2026 17:14:46 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.7.2/Todocky-1.7.2.dmg"
+                sparkle:version="40"
+                sparkle:shortVersionString="1.7.2"
+                type="application/octet-stream"
+                sparkle:edSignature="1enOD/IxnBnTwWBgGIh9jY7pS4gDd+wuO6UwDuUGmViL2+2Dd5spwB9G3WRLs7bMfngI/3BMqMTih52+Y9UMAw==" length="12433945" />
+        </item>
+
+        <item>
             <title>Version 1.7.1</title>
             <description><![CDATA[<h3>Fixed</h3>
 <ul>
