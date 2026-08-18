@@ -11,6 +11,22 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.7.1</title>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li>En vista agrupada por proyecto, el engrane de una tarjeta con una sola tarea ahora abre el editor de proyecto multi-tarea (en vez del editor de una sola tarea), igual que ya ocurría con tarjetas de más de una tarea, para poder agregar más tareas al proyecto desde ahí.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Tue, 18 Aug 2026 15:58:37 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.7.1/Todocky-1.7.1.dmg"
+                sparkle:version="39"
+                sparkle:shortVersionString="1.7.1"
+                type="application/octet-stream"
+                sparkle:edSignature="QyMTmbgZznxWBkpgOAOJcdknCVhcWCcVEDZkLLVG8bOxT5aoKzS6LN3Ql01L+XEW27LGRdsI9mV22moV3t6ZDw==" length="12423176" />
+        </item>
+
+        <item>
             <title>Version 1.7.0</title>
             <description><![CDATA[<h3>Changed</h3>
 <ul>
