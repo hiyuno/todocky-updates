@@ -11,6 +11,22 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.7.4</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>El texto de la descripción de las entradas de tiempo en Toggl ahora es personalizable desde Settings → Toggl (&quot;Time Entry Format&quot;): un campo de texto con plantilla y tokens `{project}`, `{task}`, `{stage}`, `{subtask}`, `{details}` que el usuario puede acomodar como quiera, con preview en vivo y botón &quot;Reset to Default&quot;. Nuevo `TogglDescriptionTemplate.swift` (con tests unitarios en `TogglDescriptionTemplateTests.swift`) implementa el motor de plantillas: un separador entre dos tokens solo se conserva cuando ambos vecinos tienen valor, así que un token vacío (p. ej. sin subtarea activa) se omite junto con su separador automáticamente. `TaskTimerService.togglDescription(for:appState:)` ahora arma la descripción con este motor en vez de lógica manual de strings; el nuevo `AppSettings.togglTimeEntryFormat` (persistido, con default `&quot;{project}: {task} - {stage} {subtask} - {details}&quot;` y decodificación retrocompatible vía `decodeIfPresent`) reproduce el formato hardcodeado anterior para el caso común. Simplificación documentada: el caso raro anterior donde el separador del proyecto cambiaba de &quot;:&quot; a &quot;-&quot; específicamente cuando la tarea no tenía título ya no se preserva con una plantilla plana — se considera un trade-off aceptable, no un bug.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Wed, 19 Aug 2026 05:07:50 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.7.4/Todocky-1.7.4.dmg"
+                sparkle:version="42"
+                sparkle:shortVersionString="1.7.4"
+                type="application/octet-stream"
+                sparkle:edSignature="nAxxg2UoGGiOOG2/9j2wha6bWanCXUtOVCwS2dSqMsofCjHGbTxEFp94aQRz7zySGfumgpxrf/8h35OsGkQCBw==" length="12507722" />
+        </item>
+
+        <item>
             <title>Version 1.7.3</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
