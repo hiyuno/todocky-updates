@@ -11,6 +11,33 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.7.5</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>El header del board (&quot;Good morning, X&quot; / &quot;Today is...&quot;) ahora muestra una segunda línea, &quot;and you are working on {X}&quot;, cuando hay una tarea activa/corriendo (`status == .inProgress`) en Today — independiente de si Google Calendar está mostrando una reunión, &quot;no more meetings&quot; o deshabilitado/error: la palabra &quot;and&quot; y la línea nueva se agregan a cualquiera de las tres variantes existentes del renglón de reunión sin cambiar su texto/condiciones actuales. Si Toggl está habilitado, `{X}` es exactamente la misma descripción que se enviaría a Toggl para esa tarea (usando la plantilla de Settings → Toggl → Time Entry Format); si Toggl está deshabilitado, `{X}` es un simple `&quot;{task}: {subtask}&quot;` (o solo el título si no hay subtarea activa). Si no hay tarea activa, no se muestra nada (igual que el patrón existente de &quot;no meetings&quot;). Refactor de soporte: la lógica de resolución de tokens que antes vivía inline en `TaskTimerService.togglDescription(for:appState:)` se extrajo a `TogglDescriptionTemplate.resolveTokenValues(for:appState:)` (junto con `activeSubtask(for:)`/`currentSubtaskTitle(for:)`, ahora reenviados desde `TaskTimerService` a los mismos métodos en `TogglDescriptionTemplate`) para poder reutilizarla en `TaskListView`&#x27;s nueva `workingOnText` sin duplicar lógica ni cambiar el comportamiento del push real a Toggl.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>El campo &quot;Time Entry Format&quot; de Toggl (Settings → Toggl) ya no autoguarda con cada tecla — ahora requiere presionar &quot;Save&quot;, igual que el campo de API Token vecino. El `TextField` está atado a un draft local (`draftTogglTimeEntryFormat`) que se inicializa desde el valor guardado al aparecer la tarjeta; el preview en vivo sigue actualizándose en tiempo real porque ahora lee del draft. `setTogglTimeEntryFormat` solo se invoca al presionar &quot;Save&quot; (deshabilitado si el draft no cambió o quedó vacío) o &quot;Reset to Default&quot; (que ahora solo actualiza el draft, sin persistir hasta que se presiona &quot;Save&quot;).</li>
+<li>El header del board (saludo + subtítulo) ajusta espaciado y tipografía: 8pt entre el saludo y el bloque de subtítulo, 4pt entre las dos líneas del subtítulo (reunión/estado + &quot;working on&quot;), tamaño de fuente del subtítulo bajado a 14pt. La fecha, el link de la reunión y el valor de &quot;you are working on&quot; ahora se muestran en blanco (`primaryText`) en vez de gris, mientras el texto de relleno (&quot;Today is&quot;, &quot;Your next meeting is&quot;, &quot;you are working on&quot;) se queda en gris (`secondaryText`).</li>
+<li>Cuando no hay más reuniones hoy pero sí una tarea activa, la línea deja de terminar en &quot;— enjoy the rest of your day!&quot; (no tiene sentido si sigues trabajando) y en vez de eso se corta en &quot;There&#x27;s no more meetings for today, and&quot; para enlazar con la línea de &quot;you are working on&quot; que sigue debajo.</li>
+<li>Mientras Lunch está activo, el header reemplaza por completo la línea de reunión/&quot;working on&quot; con &quot;Lunch Time! 🌮 N minutes left&quot; (redondeado al minuto, actualizado en vivo). El pill del taco en la cabecera de &quot;Today&quot; ya no muestra el conteo HH:MM:SS — solo el emoji, con fondo verde mientras está activo, del mismo tamaño circular que en reposo. El ícono de Lunch en la barra de menú también cambia de &quot;MM:SS&quot; a &quot;N minutes left&quot;.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Un &quot;Time Entry Format&quot; de Toggl personalizado (Settings → Toggl) se reseteaba silenciosamente al default en cada relanzamiento de la app (o sync/restore de iCloud): `AppSettings.encode(to:)` codificaba todos los demás campos de settings pero le faltaba la línea de `togglTimeEntryFormat` por completo, así que aunque el decode ya tenía el fallback correcto (`decodeIfPresent(...) ?? AppSettings.defaultTogglTimeEntryFormat`), la clave nunca se escribía en el JSON persistido y por lo tanto siempre se leía como &quot;ausente&quot;. Agregada la línea faltante `try c.encode(togglTimeEntryFormat, forKey: .togglTimeEntryFormat)` en `Sources/TodockyApp/Models/TaskModels.swift`.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Wed, 19 Aug 2026 18:45:09 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.7.5/Todocky-1.7.5.dmg"
+                sparkle:version="43"
+                sparkle:shortVersionString="1.7.5"
+                type="application/octet-stream"
+                sparkle:edSignature="eFcU9KKyfEhc6M449agffe9TD+AtZ7Rr/ubGyDAT55Scjq6tl6CSwur+DN4kVlzmaDxcs8gjpIT1ugGOzmGOAQ==" length="12525715" />
+        </item>
+
+        <item>
             <title>Version 1.7.4</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
