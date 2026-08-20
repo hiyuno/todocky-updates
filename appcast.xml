@@ -11,6 +11,22 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.7.7</title>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li>Follow-up to the v1.7.6 iCloud sync-conflict fix (see below): that fix was correct in principle — never push before confirming remote data — but had three remaining gaps that made a failing pull indistinguishable from a successful one and, in one case, could let an empty pull wipe live local state. (1) When `CloudSyncKeyExchangeViewModel.resolveConflictUseSyncedData()` failed (e.g. the remote pull returned nil) it set `errorMessage`, but by then `prompt` had already been cleared, so neither the create/enter-passphrase sheets (whose inline error only renders while their own `prompt` case is active) nor the native `.conflict` alert (which dismisses instantly) ever surfaced it — a safety abort looked identical to nothing happening. Added a dedicated `.alert` in `Sources/TodockyApp/Views/SettingsView.swift`, gated on `prompt == nil &amp;&amp; errorMessage != nil` so it can&#x27;t double-fire with the sheets. (2) `CloudSyncService`&#x27;s iCloud reads (`readCoordinated`/`readRawCoordinated` in `Sources/TodockyApp/Services/CloudSyncService.swift`) never force-downloaded a not-yet-materialized iCloud file before reading it — on a Mac where iCloud Drive hadn&#x27;t yet pulled the file locally, a read could silently come back empty/nil even though the file coordinator reported no error. Added a new `ensureDownloaded(url:)` helper that calls `startDownloadingUbiquitousItem` and waits (up to 12s) for `.ubiquitousItemDownloadingStatus == .current` before both reads; fully wrapped in `try?`, so a missing/non-ubiquitous URL just times out and falls through to the existing (already-safe) behavior. (3) The actual cause of today&#x27;s &quot;Backlog: 0 tasks&quot; incident: `AppEnvironment.enableCloudSync()` handed an automatically-pulled remote snapshot straight to `AppState.restoreFromBackup(_:)` with no emptiness check — `restoreFromBackup` is intentionally guard-free (it backs the Settings → &quot;Restore from Backup…&quot; flow, where a human already picked a specific, visible backup, including possibly a genuinely-empty one), but an *automatic* pull is a different trust level entirely. `enableCloudSync()` now checks `pulledSnapshot.tasks.isEmpty &amp;&amp; pulledSnapshot.projects.isEmpty` (mirroring the same empty-definition already used by `PersistenceStore.isEmpty(_:)`/the IVAN-019 guards) and, if empty, aborts via a new `CloudSyncKeyExchangeViewModel.reportPullResultedInEmptySnapshot()` (sets `errorMessage`, now visible thanks to fix (1)) instead of calling `restoreFromBackup`/`enableSync` — touching nothing. `restoreFromBackup` itself and the Settings restore flow are unchanged.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Thu, 20 Aug 2026 06:55:03 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.7.7/Todocky-1.7.7.dmg"
+                sparkle:version="45"
+                sparkle:shortVersionString="1.7.7"
+                type="application/octet-stream"
+                sparkle:edSignature="ef/UlOeb/yRmMFQsmHDCMR9p00qo7c4xSzGBsUke2FGEEbki0b1t4WUZX6ZJgME6sGzMU/ZPeueZpaUzq564Cg==" length="12729096" />
+        </item>
+
+        <item>
             <title>Version 1.7.6</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
