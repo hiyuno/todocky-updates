@@ -11,6 +11,31 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.7.6</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>Notes (v1): a new `NoteItem` entity, independent of `TaskItem`/Toggl, that lives mixed into the Backlog/Today board columns as a green card (title + Apple-Notes-style text preview, no time/estimate badges). Created via a new note-icon button in each column&#x27;s header; clicking a card opens a centered modal editor with a dimmed/blurred backdrop over the board (`TaskListView`&#x27;s `noteEditorDimLayer`, not a native `.sheet`) containing a rich-text body (reusing `RichNotesEditorViewRepresentable`) plus a checklist — select a line of text and use the toolbar&#x27;s checklist button to convert it into a checkbox item. Autosaves on every edit (400ms debounce, matching the existing cloud-push pattern). Notes and tasks share one `laneOrder` space per lane so they can be freely dragged/reordered against each other in Backlog/Today (not Done, not project-grouped columns); gear-icon menu on the card offers Edit/Delete. Syncs through the app&#x27;s existing whole-snapshot iCloud sync layer (`AppSnapshot.notes`/`deletedNoteIDs`, merged in `SyncMerger` the same way tasks are) — no Toggl involvement. New files: `Models/NoteModels.swift`, `ViewModels/NotesViewModel.swift`, `Views/NoteEditorView.swift`.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Settings → iCloud never showed the connected Apple ID email, even when iCloud Sync was working correctly: `CloudSyncService.resolveICloudAccount()` (`Sources/TodockyApp/Services/CloudSyncService.swift`) reads the `com.apple.MobileMeAccounts` preferences suite, which lives outside the app&#x27;s sandbox container, and `Todocky/Todocky.entitlements` had no shared-preference read entitlement for it — under App Sandbox the lookup silently returned nil, so the &quot;Account&quot; row (already correctly implemented in `SettingsView.swift`) never rendered. Added the narrow, read-only `com.apple.security.temporary-exception.shared-preference.read-only` entitlement for exactly that suite. Note: existing users who had iCloud Sync enabled before v1.7.3 need to toggle iCloud Sync off and back on once in Settings → iCloud to set up their cross-Mac sync passphrase — the passphrase flow only triggers on a live OFF→ON transition, not automatically for already-enabled sync.</li>
+<li>The iCloud Sync conflict alert&#x27;s &quot;Use My Other Macs&#x27; Data&quot; option was doing the opposite of what it promised: `CloudSyncKeyExchangeViewModel.resolveConflictUseSyncedData()` correctly adopted the other Mac&#x27;s decryption key, but then proceeded straight to `CloudSyncService.enableSync`, which unconditionally pushed *this* Mac&#x27;s own stale in-memory snapshot to iCloud — overwriting the real synced data it was supposed to pull down, with no fetch of the actual remote snapshot anywhere in the path. Fixed by pulling the real remote snapshot via `CloudSyncService.loadRemote()` right after the key is adopted, replacing this Mac&#x27;s live state with it (`AppState.restoreFromBackup`), and only then pushing back an idempotent echo of what was pulled. `loadRemote()` itself had a related gap — it depended on `iCloudURL`, which is only set once sync is already active, so it would always return `nil` during this pre-enable conflict flow; it now falls back to resolving the file location straight from the already-known iCloud container. If the pull fails for any reason, the flow now surfaces an error and does not touch local data or push anything, instead of silently proceeding on an assumption.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>The QuickTask launcher (search palette) now sorts results by recency of work instead of lane: the task most recently started or paused now appears first, regardless of whether it&#x27;s in Today or Backlog. Recency is the more recent of `startedAt`/`lastSyncedAt` (`LauncherTaskQuery.lastWorkedAt` in `Sources/TodockyApp/ViewModels/TaskLauncherViewModel.swift`), so a task that was paused recently after running for hours still ranks as &quot;recently worked on.&quot; Tasks never worked on (no timer history) sort to the end. The old lane → laneOrder → alphabetical ordering is preserved only as a tiebreaker for exact-recency ties or when neither task has ever been worked on.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Thu, 20 Aug 2026 06:32:25 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.7.6/Todocky-1.7.6.dmg"
+                sparkle:version="44"
+                sparkle:shortVersionString="1.7.6"
+                type="application/octet-stream"
+                sparkle:edSignature="K9neWyfY2HcddwXeKTPpPCTzG2vNvk2f9WtPExOlxMi7bJWbp2gJQtjLu5A/+/qnP4koT+H7lEImafeexLGVAA==" length="12713220" />
+        </item>
+
+        <item>
             <title>Version 1.7.5</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
