@@ -11,6 +11,28 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.7.9</title>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li>&quot;This Mac Has Unsynced Data&quot; (the iCloud sync conflict alert) could show &quot;Lost track of the synced key — please try again.&quot; even when the user picked &quot;Use My Other Macs&#x27; Data&quot; and typed nothing wrong — a real, deterministic SwiftUI `.alert` dismissal race, not an intermittent bug. Unlike a `.sheet`, tapping *any* button inside a `.alert` implicitly dismisses it as part of the same tap, which drives the alert&#x27;s `isPresented` binding to `false` — and `SettingsView.swift`&#x27;s binding called `cloudSyncKeyExchangeViewModel.cancel()` from its `set` closure, racing `cancel()`&#x27;s state-clearing against the button&#x27;s own `Task { await resolveConflictUseSyncedData() }`. When `cancel()` ran first, it cleared `pendingUnwrappedRemoteKey` before `resolveConflictUseSyncedData()` could read it, tripping its guard and surfacing exactly that error. The binding&#x27;s `set` closure is now a no-op for this specific alert — both `resolveConflictKeepLocalData()` and `resolveConflictUseSyncedData()` already fully reset `prompt`/`pendingRemoteKey`/`pendingUnwrappedRemoteKey`/`onProceedWithSnapshot` themselves on every code path, so no fallback cleanup was needed, and Escape still resolves to the `.cancel`-role &quot;Keep This Mac&#x27;s Data&quot; button as before. `.sheet`-based prompts (create/enter passphrase) are unaffected — a plain `Button` inside a `.sheet` doesn&#x27;t auto-dismiss it, so there&#x27;s no equivalent race there.</li>
+<li>`CloudSyncKeyExchangeViewModel.beginEnableFlow(proceed:)` had no reentrancy guard, so a rapid double-tap of the &quot;iCloud Sync&quot; toggle while a flow&#x27;s sheet/alert was already showing (plausible since the toggle&#x27;s visual &quot;on&quot; state only flips after the whole flow succeeds) could silently clobber in-flight state (`onProceedWithSnapshot`, `prompt`). Added `guard prompt == nil else { return }` as the first line, making a second call while a prompt is already showing a safe no-op.</li>
+<li>Sparkle&#x27;s &quot;Check for Updates&quot; could report &quot;up to date&quot; even when a newer build was actually published, because the appcast fetch could be served from a stale cached response within the app&#x27;s process lifetime. `UpdaterService` now implements `SPUUpdaterDelegate`&#x27;s `feedURLString(for:)`, appending a `?t=&lt;unix-timestamp&gt;` cache-busting query parameter to the existing `SUFeedURL` (read from the bundle, not hardcoded) on every check — Sparkle&#x27;s documented technique for bypassing any URLSession/CDN caching layer.</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>iCloud Sync now has an in-window diagnostics log (Settings → iCloud → &quot;Sync Diagnostics Log&quot;), so a sync issue on a given Mac can be diagnosed from inside the app instead of guessing or digging through Console.app. New `CloudSyncDiagnosticsLog` (`Sources/TodockyApp/Services/CloudSyncDiagnosticsLog.swift`), mirroring the existing `TimerDiagnosticsLog` pattern (capped 100-entry rolling log, info/warning levels, Copy All/Clear) but as its own dedicated instance so sync diagnostics don&#x27;t mix with the unrelated timer log. Wired through `AppEnvironment`/`TodockyApp.swift` and injected into `CloudSyncService`/`CloudSyncKeyExchangeViewModel` via a new, defaulted `diagnosticsLog` init parameter (defaults to `nil`, so no existing call site needed updating). Logs a readable, ordered timeline of the whole key-exchange flow — app version/build at the start of `beginEnableFlow`, which branch was taken at each decision point (create vs. enter passphrase, already-matched vs. conflict vs. fresh-install, self-heal re-fetches, unwrap success/failure), and specifically calls out when the `pendingUnwrappedRemoteKey` guard fails in `resolveConflictUseSyncedData()` (the exact failure behind the &quot;Lost track of the synced key&quot; bug fixed above) — plus `CloudSyncService`&#x27;s remote-key-fetch/publish/load outcomes, including which of `fetchRemoteWrappedKey()`&#x27;s three nil-producing branches was hit. Never logs key material or the passphrase itself, only branch/outcome information.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Fri, 21 Aug 2026 04:50:18 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.7.9/Todocky-1.7.9.dmg"
+                sparkle:version="47"
+                sparkle:shortVersionString="1.7.9"
+                type="application/octet-stream"
+                sparkle:edSignature="OPZCBjp1ZQUfLBe8G2NaXeZwcURNTBWPVwG+TGtmip1adC14XrAIskYR7Xh5YfjFYrCazp63I+zmOYGxwFStBA==" length="12867388" />
+        </item>
+
+        <item>
             <title>Version 1.7.8</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
