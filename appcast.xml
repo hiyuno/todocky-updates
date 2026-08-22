@@ -11,6 +11,35 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.8.0</title>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li>Two Macs could each show a different task as &quot;running&quot; at the same time after an iCloud sync. The merger now enforces a single-running-task rule across the whole snapshot: the task started most recently stays running, the other is silently paused (time tracked correctly, and its real Toggl entry stopped if this Mac owned it).</li>
+<li>The menu bar&#x27;s &quot;Add&quot; submenu worked once, then stopped responding after the main window was closed — it had no way to reopen the window. Fixed.</li>
+<li>Cleaned up the menu bar&#x27;s &quot;Working on:&quot; section: the project name no longer shows its raw Toggl job-number/year prefix, the text renders in true white (was rendering dimmer than intended), and Client/Project/Task now share one compact line.</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>New &quot;Client&quot; field per Toggl project, shown in the menu bar and in the task editor — auto-filled from Toggl&#x27;s own client data when available (read-only in that case), editable manually otherwise.</li>
+<li>Today&#x27;s calendar events in the menu bar are now clickable when they have a meeting link.</li>
+<li>Menu bar dropdown reorganized with clear &quot;Next Meeting:&quot; and &quot;Working on:&quot; section headers.</li>
+<li>New &quot;Add&quot; submenu in the menu bar (Project/Task/Subtask) for quickly creating a task or subtask in the project you&#x27;re currently working on without opening the main window first.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Removed the redundant &quot;Quit Todocky&quot; item from the menu bar&#x27;s left-click dropdown (still available on right-click).</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Sat, 22 Aug 2026 17:18:21 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.8.0/Todocky-1.8.0.dmg"
+                sparkle:version="48"
+                sparkle:shortVersionString="1.8.0"
+                type="application/octet-stream"
+                sparkle:edSignature="/nl34HHRN/xMpMpgR4I7WFRGuXxpv8wPxEOMbGWuWp4tuOQghg7wZl+NTO0MZGo7mMXbeg1uklHMbl5v8lx/BQ==" length="12917805" />
+        </item>
+
+        <item>
             <title>Version 1.7.9</title>
             <description><![CDATA[<h3>Fixed</h3>
 <ul>
