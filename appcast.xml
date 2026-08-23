@@ -11,6 +11,38 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.8.1</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>New &quot;Quick Links&quot; row in the multi-task &quot;Edit Tasks&quot; editor, next to the Project Folder Template picker: shows all four quick-link icons (Working Files, Presentation, Preview Files, Final Files) at once, colored gray when unset and green when set. Left-click opens the link (or starts the set flow if unset); right-click gives the full Open/Change/Remove/Set menu. Links belong to the currently selected task and show only on that task&#x27;s board row.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Setting a Quick Link from the multi-task editor wrote it to the whole project, so every task row showed the same folder and clicking one opened all of them. Each task now has its own Quick Links; the project header keeps the separate project-level ones.</li>
+<li>Collapsed project-group cards in Backlog had extra space under the title because the header kept its 10pt bottom padding (meant to separate the title from task rows when expanded). That padding is now 0 while collapsed so top and bottom inset match.</li>
+<li>Collapsing a project group in Backlog or Today no longer slides the task rows up through the card (which looked like a mask). Rows stay in place, fade out, then the card height collapses.</li>
+<li>Collapsing a project group now applies only to that column. Expanding or collapsing the same project in Backlog leaves Today unchanged, and the reverse.</li>
+<li>Board card borders were clipped on the left and right (the column&#x27;s clip mask cut the 1pt stroke in half, so the rounded corners looked squared off). The stroke is drawn inside the card and the column leaves 1pt of room so the full curve shows.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Note card gear icons now sit at 30% opacity and go to full opacity on hover, matching the rest of the board&#x27;s utility icons.</li>
+<li>The task editor&#x27;s Client field now hides entirely (instead of showing disabled with a &quot;Synced from Toggl&quot; caption) when the selected project already has a client resolved from Toggl — it only appears for projects with no Toggl client.</li>
+<li>The &quot;Set Presentation&quot; (and other path-based Quick Link) prompt is no longer a system alert. It is a custom dark modal matching the rest of the app: title + close, labeled Path field, Cancel on the left and a white Save pill on the right. When opened from Edit Tasks it now layers in front of that sheet instead of on the board behind it.</li>
+<li>Settings is no longer a separate floating window. It opens as a centered overlay on the main board (Create Card chrome, glass dim), closable with the X, Escape, or a click on the dimmer. Cmd+, still opens it. The overlay uses the same board palette: `#ACDD01` accent, `#121212` cards, `#0A0A0A` panels, `#2E2E2E` borders, `#F5F5F0` primary text. The dimmer fades only; the Settings panel slides up from the bottom while fading in.</li>
+<li>Edit Tasks / New Tasks is no longer a system sheet. It uses the same overlay as Settings and Notes: glass dim, `#121212` panel with 20pt corners, title + X, Import Template on the left and a white Done pill on the right. Close with the X, Escape, Done, or a click on the dimmer. The panel slides up from the bottom while fading in. In that footer, Quick Links and Project Folder Template now sit side by side (links left, template right) instead of stacked.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Sun, 23 Aug 2026 00:42:54 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.8.1/Todocky-1.8.1.dmg"
+                sparkle:version="49"
+                sparkle:shortVersionString="1.8.1"
+                type="application/octet-stream"
+                sparkle:edSignature="y0vIk/au31AnGPRGJy1I7KRKmjAOjGUnpgPVSZgIakrt+a9LOcINdR906GvnIREZJZTmdu6w23tRJBwYlSMAAA==" length="13091990" />
+        </item>
+
+        <item>
             <title>Version 1.8.0</title>
             <description><![CDATA[<h3>Fixed</h3>
 <ul>
