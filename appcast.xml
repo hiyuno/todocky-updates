@@ -11,6 +11,30 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.8.2</title>
+            <description><![CDATA[<h3>Changed</h3>
+<ul>
+<li>Editing a project always opens the multi-task Edit Tasks overlay (the same window as New Tasks), even when the project has only one task. The old single-task Edit Task sheet is no longer used for project edits; the task you clicked stays selected in the sidebar.</li>
+<li>The menu bar now always shows today&#x27;s next meeting (title + time until it starts), no matter how far away it is — it used to only appear once the meeting was starting within 15 minutes.</li>
+<li>When no timer is running (just the next meeting showing), the menu bar drops the idle timer icon and its &quot;·&quot; separator — the meeting text shows on its own instead of trailing an icon that only made sense next to a running timer&#x27;s digits. Still shows icon + digits + &quot;·&quot; + meeting when a timer or lunch is active.</li>
+<li>The built-in default folder templates are now just Motion Graphics, Graphic Design, and Video Editing (each without the old &quot;00_Brief&quot; root folder) — &quot;Social Media Post&quot; is no longer seeded. This is what a fresh install, or another Mac syncing for the first time, gets; the app also re-adds any of these by name if one goes missing, so removing &quot;Social Media Post&quot; from the defaults is what stops it from reappearing after being deleted.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>The Quick Links / Project Folder Template row at the bottom of the multi-task editor no longer stretches down with a large empty gap above the &quot;Import Template&quot;/&quot;Done&quot; footer. The vertical divider between the two columns had no height cap, so it greedily filled whatever extra space the parent gave it and dragged the whole row tall; it&#x27;s now sized to its actual content.</li>
+<li>Pressing Return to add a new subtask in the multi-task editor now actually moves the cursor into the new row instead of leaving it stuck on the previous one. The retry mechanism that grabs focus for the new field depended on a lookup table (`subtaskFieldRefs`) that was being written to from inside a SwiftUI view-update pass, which never reliably committed in time — the write now happens on the next run loop tick instead, so the lookup that follows moments later actually finds the field.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Tue, 25 Aug 2026 14:05:09 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.8.2/Todocky-1.8.2.dmg"
+                sparkle:version="50"
+                sparkle:shortVersionString="1.8.2"
+                type="application/octet-stream"
+                sparkle:edSignature="zFMYS2XSUGOktoAnMq8TgGwfoFeIl6W/jjlLpMbbDHD7l1BTJRszqqlRfyYs9R7us0IPDccYMCaktc+373QlAA==" length="13088876" />
+        </item>
+
+        <item>
             <title>Version 1.8.1</title>
             <description><![CDATA[<h3>Added</h3>
 <ul>
