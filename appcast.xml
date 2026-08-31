@@ -11,6 +11,26 @@
         <!-- Add new <item> entries here for each release. Keep the latest version first. -->
 
         <item>
+            <title>Version 1.8.3</title>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>The board&#x27;s Subtasks panel (right column) can now add and edit subtasks inline, without opening the full task editor. A red &quot;+ Add Task&quot; row at the bottom of the subtask list opens an inline editor (title field + billable/tag/workflow-stage pills, mirroring the create/edit sheet&#x27;s own subtask row); pressing Enter, clicking away, or closing a tag/stage popover all autosave it (a blank title is discarded instead). Double-clicking an existing subtask&#x27;s title opens the same inline editor pre-filled for editing in place — single-click still toggles completion as before. New `AppState.addSubtask`/`updateSubtaskDetails` methods back this (`Sources/TodockyApp/ViewModels/AppEnvironment.swift`); the UI lives in `Sources/TodockyApp/Views/TaskListView.swift` (`subtaskInlineEditorRow` and friends).</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>The menu bar drops its icon whenever a meeting is showing, even if a timer or lunch is also running — it used to only hide when idle. The icon exists to say &quot;this is a timer/lunch,&quot; which stops mattering once there&#x27;s meeting text competing for the same space; digits + &quot;·&quot; + meeting still show, just without the icon in front.</li>
+</ul>]]></description>
+            <sparkle:descriptionFormat>html</sparkle:descriptionFormat>
+            <pubDate>Mon, 31 Aug 2026 16:44:31 +0000</pubDate>
+            <enclosure
+                url="https://github.com/hiyuno/todocky-updates/releases/download/v1.8.3/Todocky-1.8.3.dmg"
+                sparkle:version="51"
+                sparkle:shortVersionString="1.8.3"
+                type="application/octet-stream"
+                sparkle:edSignature="fhgVDx5FJarKk0wyjNL23hA/AJLaGc2A20/yLOB8GJrO1jS34ygQdKreE2WbqH6xE0IYOyVyyxuRTEh+HpFpBw==" length="13218604" />
+        </item>
+
+        <item>
             <title>Version 1.8.2</title>
             <description><![CDATA[<h3>Changed</h3>
 <ul>
